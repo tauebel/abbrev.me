@@ -3,5 +3,5 @@
 	<p id="intro">Your abbreviated URL:</p>
 	<%= link_to request.host_with_port + '/' + @url.shortened_url, request.host_with_port + '/' + @url.shortened_url %> <br>
 		<br>
-	<%= link_to "Click here to shorten another URL!", root_path %>
+	<%= link_to "Click here to shorten another URL!", root_path, :target => "_blank" %>
 </div>
