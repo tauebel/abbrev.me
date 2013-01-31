@@ -1,5 +1,6 @@
 Abbrevme::Application.routes.draw do
-  resources :urls
+  resources :urls, :only => [:new, :create, :show]
+  root :to => 'urls#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

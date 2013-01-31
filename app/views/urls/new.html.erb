@@ -1,0 +1,8 @@
+<h1>Abbrev.me</h1>
+<h4>A simple, no-frills URL shortener.</h4>
+<%= form_for(@url) do |f| %>
+	<%= f.text_field :original_url, :placeholder => "Enter your URL here."%>
+	<p class="alert"><%= alert %></p>
+	<%= f.submit "Shorten it!" %>
+<% end %>
+	
