@@ -1,7 +1,7 @@
 <div id="results">
 	<p class="notice"><%= notice %></p>
 	<p id="intro">Your abbreviated URL:</p>
-	<%= link_to request.host_with_port + '/' + @url.shortened_url, request.host_with_port + '/' + @url.shortened_url, :target => "_blank" %> <br>
+	<%= link_to "abbrev.me/#{@url.shortened_url}", @url.shortened_url, :target => "_blank" %> <br>
 		<br>
 </div>
 	<div id="shorten_another">
