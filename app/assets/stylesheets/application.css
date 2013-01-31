@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+* {
+	background: url("/assets/ricepaper.png") ;
+	font-family: 'Wendy One', sans-serif;
+	color: red;
+	text-align: center;
+}
+
+#results {
+	padding-top: 10%;
+	font-size: 35px;
+}
+
+#shorten_another {
+	padding-top: 30px;
+	font-size: 20px;
+}
