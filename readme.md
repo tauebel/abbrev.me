@@ -1,0 +1,1 @@
+A simple, no-frills URL shortener, Abbrev.me is helpful for those times when Twitter isn't playing nice and you need to free up a few more of your 160 characters.
