@@ -15,7 +15,12 @@ class UrlsController < ApplicationController
     end
   end
   
-  def show
+  def index
     @url = Url.find(params[:id])
+  end
+  
+  def show
+    @url = Url.find_by_shortened_url(params[:shortened_url])
+    redirect_to @url.original_url
   end
 end

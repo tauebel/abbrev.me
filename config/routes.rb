@@ -1,6 +1,6 @@
 Abbrevme::Application.routes.draw do
-  resources :urls, :only => [:new, :create, :show]
-  get '/:shortened_url', :to => 'redirects#create', :as => 'url'
+  resources :urls, :only => [:new, :create, :index, :show]
+  get ':shortened_url', :to => 'urls#show', :as => 'url'
   root :to => 'urls#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
