@@ -1,6 +1,9 @@
 class Url < ActiveRecord::Base
+  
   before_create :get_shortened_url
   attr_accessible :original_url, :shortened_url
+  
+  belongs_to :user 
   
   validates :original_url, :format => { :with => /https?:\/\/[\S]+/, :message => "Your URL must begin with 'http:// or https://"}
   

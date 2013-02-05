@@ -1,8 +1,22 @@
 <div id="results">
 	<p class="notice"><%= notice %></p>
-	<p id="intro">Your abbreviated URL:</p>
-	<%= link_to "abbrev.me/#{@url.shortened_url}", @url.shortened_url, :target => "_blank" %> <br>
-		<br>
+	<p id="intro">Your abbreviated URLs:</p>
+	<table>
+	  <thead>
+	    <tr>
+	      <th class="head">Shortened URL</th>
+	      <th class="head">Original URL</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% @urls.each do |url| %>
+	      <tr>
+	        <td class="data"><%= link_to "abbrev.me/#{url.shortened_url}", url.shortened_url, :target => "_blank" %></td>
+	        <td class="data"><%= url.original_url %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
 </div>
 	<div id="shorten_another">
 	<%= link_to "Click here to shorten another URL!", root_path %>

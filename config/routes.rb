@@ -1,5 +1,7 @@
 Abbrevme::Application.routes.draw do
-  resources :urls, :only => [:new, :create, :index, :show]
+  devise_for :users
+
+  resources :urls, :only => [:new, :create, :show, :index]
   get ':shortened_url', :to => 'urls#show', :as => 'url'
   root :to => 'urls#new'
   # The priority is based upon order of creation:
