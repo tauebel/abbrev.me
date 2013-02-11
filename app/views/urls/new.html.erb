@@ -2,9 +2,9 @@
 <h4>A simple, no-frills URL shortener.</h4>
 <div id="form">
 <%= form_for(@url) do |f| %>
-	<%= f.text_field :original_url, :size => '55', :placeholder => "Enter your URL here."%>
+	<%= f.text_field :original_url, :class => 'input', :size => '55', :placeholder => "Enter your URL here."%>
 	<p class="alert"><%= alert %></p>
-	<%= f.submit "Shorten it!" %>
+	<%= f.submit "Shorten it!", :class => 'submit' %>
 <% end %>
 </div>
 	
